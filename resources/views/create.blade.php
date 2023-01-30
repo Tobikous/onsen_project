@@ -8,7 +8,10 @@
  
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
- 
+    
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    
+
     <title>レビュー投稿画面</title>
 </head>
  
@@ -31,10 +34,17 @@
                     </div>
 
                     <div class="form-group">
-                        <label>訪れた温泉:</label>
+                        <label>温泉名:</label>
                         <input type="text" name='onsenmei' class="form-control" placeholder="行った場所を記入してください">
                     </div>
 
+                    <div id="map" style="height:400px">
+                    </div>
+                    <script src="{{ asset('/js/result.js') }}"></script>
+                    <script src="https://maps.googleapis.com/maps/api/js?language=ja&region=JP&key={{ config("services.google-map.apikey") }}&libraries=places&callback=initMap" async defer></script>
+
+
+                    
                     <div class="form-group">
                         <label>レビュー点数:</label>
                         <select name='star' class="form-control">

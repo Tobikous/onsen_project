@@ -37,7 +37,7 @@
         
                     <br>
                     <h3>アップされた画像</h3>
-                    <img src="{{ '/storage/' . $showrev['image']}}" class='w-100 mb-3'/>
+                    <img src="{{ '/storage/' . $showrev['image']}}" class='w-100 mb-3' style="height:300px">
                     <div></div>
 
                     @if (!is_null($myshowrev))

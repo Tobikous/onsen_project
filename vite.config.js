@@ -11,6 +11,9 @@ export default defineConfig({
     vue(), // ⭐️ 追加
   ],
   server: {
-    host: true
+    host: true,
+    hmr: {
+      host: 'localhost',
+  },
   },
 })
