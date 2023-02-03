@@ -79,19 +79,21 @@
 					class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
 					@guest
 					@if (Route::has('login'))
-					<a class="mr-5 hover:text-gray-900" href="{{ route('login') }}">{{ __('Login') }}</a>
+					<a class="mr-5 hover:text-gray-900" href="{{ route('login') }}">ログイン</a>
 					@endif
 
 					@if (Route::has('register'))
-					<a class="mr-5 hover:text-gray-900" href="{{ route('register') }}">{{ __('Register') }}</a>
+					<a class="mr-5 hover:text-gray-900" href="{{ route('register') }}">会員登録</a>
 					@endif
 					@else
+					<a class="mr-5 hover:text-gray-900" href="{{ route('home') }}">ホーム</a>
+					<a class="mr-5 hover:text-gray-900" href="{{ route('create') }}">レビューを投稿する</a>
+					<a class="mr-5 hover:text-gray-900" href="{{ route('article') }}">レビュー一覧</a>
+
 					<a class="mr-5 hover:text-gray-900" href="{{ route('logout') }}" onclick="event.preventDefault();
                     	document.getElementById('logout-form').submit();">{{ __('ログアウト')
 						}}
 					</a>
-
-					<a class="mr-5 hover:text-gray-900" href="{{ route('create') }}">レビューを投稿する</a>
 
 					<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
 						@csrf
@@ -100,10 +102,7 @@
 
 					@endguest
 				</nav>
-				<a
-					class="inline-flex items-center  border-0 py-1 px-3 focus:outline-none font-bold mt-4 md:mt-0 text-black-900">
-					ようこそ、{{ Auth::user()->name }}様
-				</a>
+
 			</div>
 		</header>
 
@@ -175,7 +174,7 @@
 						<h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">SUBSCRIBE</h2>
 						<div
 							class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
-							<div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+							<div class="w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
 								<label for="footer-field" class="leading-7 text-sm text-gray-600">Placeholder</label>
 								<input type="text" id="footer-field" name="footer-field"
 									class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-yellow-200 focus:border-yellow-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">

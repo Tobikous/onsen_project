@@ -6,28 +6,28 @@
 
 
 
-	<div class="flex flex-col text-center my-10">
+	<div class="flex container  w-full flex-col text-center my-10">
 		@if (session('status'))
 		<div class="alert alert-success" role="alert">
 			{{ session('status') }}
 		</div>
 		@endif
 		<button
-			class="flex mx-auto text-white bg-orange-500 border-0 py-8 px-60 focus:outline-none hover:bg-orange-600 rounded font-semibold text-4xl"
+			class=" m-auto text-white bg-orange-500 border-0 py-8 px-20 focus:outline-none hover:bg-orange-600 rounded font-semibold text-4xl"
 			onclick="location.href='{{ route('create') }}'">レビューを投稿する</button>
 	</div>
 
 
 	<section class="text-gray-600 body-font">
 		<div class="container px-5 py-10 mx-auto">
-			<h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 m-3">投稿レビュー一覧</h1>
+			<h1 class="title-font text-3xl  font-medium text-gray-900 mb-5">投稿レビュー一覧</h1>
 			<div class="flex flex-wrap -m-4">
 				@foreach($reviews AS $review)
 				<div class="p-4 lg:w-1/3">
 					<div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-8 pb-10 rounded-lg text-center">
 						<img alt="gallery" class="lg:h-48 md:h-36 w-full object-cover object-center"
 							src="{{ '/storage/' . $review['image']}}">
-						<h2 class="text-yellow-900 tracking-widest text-s title-font font-medium text-gray-900 mt-3">
+						<h2 class="text-yellow-500 tracking-widest text-s title-font font-medium mt-3">
 							{{$review['star']}}
 						</h2>
 						<h1
@@ -57,7 +57,7 @@
 
 	<section class="text-gray-600 body-font">
 		<div class="container px-5 py-24 mx-auto">
-			<h1 class="title-font sm:text-2xl text-xl font-medium text-gray-900 mb-3">自分が投稿したレビュー</h1>
+			<h1 class="title-font text-3xl font-medium text-gray-900 mb-5">自分が投稿したレビュー</h1>
 			<div class="flex flex-wrap -m-4">
 				@foreach($my_reviews AS $my_review)
 				<div class="p-4 md:w-1/3">
@@ -65,8 +65,10 @@
 						<img class="lg:h-48 md:h-36 w-full object-cover object-center"
 							src="{{ '/storage/' . $my_review['image']}}" alt="blog">
 						<div class="p-6">
-							<h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">CATEGORY</h2>
-							<h1 class="title-font text-lg font-medium text-gray-900 mb-3">The Catalyzer</h1>
+							<h1 class="title-font text-lg font-medium text-gray-900 ">The Catalyzer</h1>
+							<h2 class="text-yellow-500 tracking-widest text-s title-font font-medium  mb-3">
+								{{$review['star']}}
+							</h2>
 							<p class="leading-relaxed mb-3 line-clamp-3">{{$my_review['content']}}</p>
 							<div class="flex items-center flex-wrap ">
 								<a class="text-yellow-500 inline-flex items-center md:mb-2 lg:mb-0 p-1"
