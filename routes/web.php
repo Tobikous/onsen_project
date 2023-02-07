@@ -16,16 +16,16 @@ use Illuminate\Support\Facades\Route;
 
 
 Auth::routes();
+// Route::get('/login/guest', [App\Http\Controllers\Auth\LoginController::class, 'guestLogin'])->name('/login/guest');
+
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('index');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/create', [App\Http\Controllers\HomeController::class, 'create'])->name('create');
-Route::post('/store', [App\Http\Controllers\HomeController::class, 'store'])->name('store'); 
+Route::post('/store', [App\Http\Controllers\HomeController::class, 'store'])->name('store');
 Route::get('/show/{id}', [App\Http\Controllers\HomeController::class, 'show'])->name('show');
 Route::get('/article', [App\Http\Controllers\HomeController::class, 'article'])->name('article');
 Route::get('/edit/{id}', [App\Http\Controllers\HomeController::class, 'edit'])->name('edit');
-// Route::get('/update/{id}', [App\Http\Controllers\HomeController::class, 'update'])->name('update');
 Route::post('/update/{id}', [App\Http\Controllers\HomeController::class, 'update'])->name('update');
 Route::post('/delete/{id}', [App\Http\Controllers\HomeController::class, 'delete'])->name('delete');
 Route::post('/upload', [App\Http\Controllers\HomeController::class, 'upload'])->name('upload');
-
