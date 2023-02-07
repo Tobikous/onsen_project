@@ -10,6 +10,7 @@ module.exports = {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./resources/**/*.vue", 
+    "./node_modules/flowbite/**/*.js"
   ],
 
 
@@ -19,5 +20,6 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/line-clamp')],
+  // plugins: [require('flowbite/plugin')],
 }
