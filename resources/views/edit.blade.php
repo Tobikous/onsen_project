@@ -7,7 +7,8 @@
 	<div class="max-w-2xl mx-auto bg-white p-16">
 
 		<form method='POST' action="{{ route('update', [ 'id' =>$showReview['id'] ]) }}" enctype="multipart/form-data">
-			<input type='hidden' name='user_id' value="{{ $user['id'] }}">
+			<input type='hidden' name='user_id' value="{{$user['id']}}">
+			<input type='hidden' name='onsenName' value="{{$showReview['onsenName']}}">
 			@csrf
 
 

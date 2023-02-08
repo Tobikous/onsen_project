@@ -9,4 +9,13 @@ class Review extends Model
 {
     protected $table = 'review';
 
+    public function scopeLatestOrder($query)
+    {
+        return $query->OrderBy('updated_at', 'DESC');
+    }
+
+    public function scopeMatchId($query, $id)
+    {
+        return $query->where('id', $id);
+    }
 }
