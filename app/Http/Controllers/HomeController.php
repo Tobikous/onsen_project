@@ -31,7 +31,6 @@ class HomeController extends Controller
     {
         $user = \Auth::user();
         $reviews = Review::latestOrder()->paginate(3);
-        // $reviews = Review::active()->latestOrder()->get();
         $myReviews = Review::where('user_id', $user['id'])->latestOrder()->paginate(3);
         return view('home', compact('user', 'reviews', 'myReviews'));
     }
