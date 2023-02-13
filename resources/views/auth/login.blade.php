@@ -6,7 +6,7 @@
 		@csrf
 		<div class="container px-10 py-20 mx-auto flex flex-wrap items-center">
 			<div class="lg:w-3/5 md:w-1/2 md:pr-16 lg:pr-0 pr-0">
-				<h1 class="mb-2 title-font font-medium text-3xl text-gray-900">温泉レビューサイト、温泉レビュー（仮）へようこそ！</h1>
+				<h1 class="mb-2 title-font font-medium text-3xl text-gray-900">温泉レビューサイト、おんびゅーへようこそ！</h1>
 				<a id="guestLogin" class="leading-relaxed mt-4">ゲストの方はこちらから（会員登録なしでレビューを見る）</a>
 				<script>
 					document.getElementById("guestLogin").onclick = function() {
