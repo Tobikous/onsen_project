@@ -5,7 +5,7 @@ import vue from '@vitejs/plugin-vue' // ⭐️ 追加
 export default defineConfig({
   plugins: [
     laravel([
-      'resources/sass/style.scss',
+      'resources/sass/app.scss',
       'resources/js/app.js',
     ]),
     vue(), // ⭐️ 追加
