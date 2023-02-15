@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import laravel from 'laravel-vite-plugin'
-import vue from '@vitejs/plugin-vue' // ⭐️ 追加
+import vue from '@vitejs/plugin-vue'
 
 export default defineConfig({
   plugins: [
@@ -8,7 +8,7 @@ export default defineConfig({
       'resources/sass/app.scss',
       'resources/js/app.js',
     ]),
-    vue(), // ⭐️ 追加
+    vue(),
   ],
   server: {
     host: true,
