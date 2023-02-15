@@ -21,7 +21,6 @@ return new class () extends Migration {
             $table->Text('onsenName');
             $table->bigInteger('tag_id')->nullable();
             $table->string('image')->nullable();
-            $table->integer('status')->defalut('1');
             $table->timestamps();
         });
     }

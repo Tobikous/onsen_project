@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class Onsen extends Model
 {
     protected $table = 'onsenAreaData';
+    protected $fillable = ['name','area','adress','API'];
 }
