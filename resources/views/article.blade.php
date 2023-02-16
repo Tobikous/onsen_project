@@ -34,7 +34,7 @@
 								<h2 class="text-yellow-500 tracking-widest text-s title-font font-medium mt-3">
 									{{$review['star']}}
 								</h2>
-								<p class="leading-relaxed line-clamp-7">{{$review['content']}}</p>
+								<p class="leading-relaxed line-clamp-3">{{$review['content']}}</p>
 								<a class="text-yellow-500 inline-flex items-center mt-4"
 									href="/show/{{$review['id']}}">レビュー詳細
 									<svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"

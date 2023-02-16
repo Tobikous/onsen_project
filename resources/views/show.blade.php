@@ -36,7 +36,7 @@
 
 						@if (!is_null($myShowReview))
 						<button
-							class="flex ml-auto text-white bg-orange-500 border-0 py-2 px-6 focus:outline-none hover:bg-orange-600 rounded"
+							class="flex ml-auto text-white bg-orange-500 border-0 pt-4 font-semibold pb-2 px-6 focus:outline-none hover:bg-orange-600 rounded"
 							type="button" onclick="location.href = '/edit/{{$showReview['id']}}'">レビューを編集する</button>
 
 						<form method='POST' action="/delete/{{$showReview['id']}}" id='delete-form'>
