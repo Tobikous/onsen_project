@@ -77,14 +77,10 @@ class ArticleController extends Controller
             'user_id' => $data['user_id'],
             'star' => $data['star'],
             'time' => $data['time'],
-            // 'image' => $path[1],
+            "image" => $image,
             'tag_id' => $tagId,
             'onsenName' => $data['onsenName'],
             'status' => 1
-        ]);
-
-        Review::insert([
-            "image" => $image
         ]);
 
         return redirect()->route('home')->with('success', 'レビューを投稿しました。');
