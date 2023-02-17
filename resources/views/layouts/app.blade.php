@@ -83,32 +83,32 @@
 					</g>
 				</svg>
 
-				<span class="ml-3 text-xl">{{ config('app.name', 'Laravel') }}</span>
+				<span class="ml-3 font-medium text-xl">{{ config('app.name', 'Laravel') }}</span>
 			</a>
 			<nav
 				class="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-400	flex flex-wrap items-center text-base justify-center">
 				@guest
-				<a class="mr-7 text-yellow-500 hover:text-yellow-700" href="{{ route('login') }}">ログイン</a>
-				<a class="mr-7 text-yellow-500 hover:text-yellow-700" href="{{ route('register') }}">会員登録</a>
+				<a class="mr-7 text-yellow-500 hover:text-yellow-600" href="{{ route('login') }}">ログイン</a>
+				<a class="mr-7 text-yellow-500 hover:text-yellow-600" href="{{ route('register') }}">会員登録</a>
 				@endguest
 
 				@auth
 				<a class="mr-10 inline-flex font-bold  text-gray-900">
 					ようこそ、{{ Auth::user()->name }}様
 				</a>
-				<a class="mr-7 text-yellow-500 hover:text-yellow-700" href="{{ route('home') }}">ホーム</a>
-				<a class="mr-7 text-yellow-500 hover:text-yellow-700" href="{{ route('article') }}">レビュー一覧</a>
+				<a class="mr-7 text-yellow-500 hover:text-yellow-600" href="{{ route('home') }}">ホーム</a>
+				<a class="mr-7 text-yellow-500 hover:text-yellow-600" href="{{ route('article') }}">レビュー一覧</a>
 
 				@if(Auth::user()->id !== 1 )
-				<a class="mr-7 text-yellow-500 hover:text-yellow-700" href="{{ route('create') }}">レビューの投稿</a>
-				<a class="mr-7 text-yellow-500 hover:text-yellow-700" href="{{ route('logout') }}" onclick="event.preventDefault();
+				<a class="mr-7 text-yellow-500 hover:text-yellow-600" href="{{ route('create') }}">レビューの投稿</a>
+				<a class="mr-7 text-yellow-500 hover:text-yellow-600" href="{{ route('logout') }}" onclick="event.preventDefault();
                     	document.getElementById('logout-form').submit();">ログアウト
 				</a>
 				<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
 					@csrf
 				</form>
 				@else
-				<a class="mr-7 text-yellow-500 hover:text-yellow-700" href="{{ route('logout') }}" onclick="event.preventDefault();
+				<a class="mr-7 text-yellow-500 hover:text-yellow-600" href="{{ route('logout') }}" onclick="event.preventDefault();
                     	document.getElementById('logout-form').submit();">ログイン
 				</a>
 				<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

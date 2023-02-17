@@ -48,15 +48,14 @@ class ArticleController extends Controller
     public function store(UserRequest $request)
     {
         $data = $request->all();
-        $image = base64_encode(file_get_contents($request->image->getRealPath()));
 
-        // $image = $request->file('image');
-        // if ($request->hasFile('image')) {
-        //     $path = \Storage::put('/public', $image);
-        //     $path = explode('/', $path);
-        // } else {
-        //     $path = 'null';
-        // }
+        $image = $request->file('image');
+        if ($request->hasFile('image')) {
+            $path = \Storage::put('/public', $image);
+            $path = explode('/', $path);
+        } else {
+            $path = 'null';
+        }
 
         $existOnsen = Onsen::where('name', $data['onsenName'])->first();
         if (empty($existOnsen['id'])) {
@@ -67,17 +66,17 @@ class ArticleController extends Controller
 
         $existTag = Tag::where('name', $data['tag'])->first();
         if (empty($existTag['id'])) {
-            Tag::create(['name' => $data['tag'],'user_id' => $data['user_id']]);
+            $tagId = Tag::insertGetId(['name' => $data['tag'],'user_id' => $data['user_id']]);
         } else {
             $tagId = $existTag['id'];
         }
 
-        Review::create([
+        $review = Review::create([
             'content' => $data['content'],
             'user_id' => $data['user_id'],
             'star' => $data['star'],
             'time' => $data['time'],
-            "image" => $image,
+            'image' => $path[1],
             'tag_id' => $tagId,
             'onsenName' => $data['onsenName'],
             'status' => 1
@@ -137,7 +136,7 @@ class ArticleController extends Controller
         'content'=> $inputs['content'],
         'star' => $inputs['star'],
         'time' => $inputs['time'],
-        "image" => $image,
+        'image' => $path[1],
         'tag_id' => $tagId ]);
         return redirect()->route('home')->with('success', 'レビューを更新しました。');
     }

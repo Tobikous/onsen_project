@@ -33,16 +33,15 @@
 					<div class="p-4 lg:w-1/3">
 						<div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-8 pb-10 rounded-lg text-center">
 							<img alt="gallery" class="lg:h-48 md:h-36 w-full object-cover object-center"
-								src="data:image/png;base64,{{ $review['image'] }}">
-							<h2
-								class="text-yellow-500 hover:text-yellow-700 tracking-widest text-s title-font font-medium mt-3">
+								src="{{ '/storage/' . $review['image']}}">
+							<h2 class="text-yellow-500 tracking-widest text-s title-font font-medium mt-3">
 								{{$review['star']}}
 							</h2>
 							<h1
 								class="title-font sm:text-xl text-xl font-medium text-gray-600 mb-2.5 line-clamp-2 overflow-hidden">
 								{{$review['onsenName']}}</h1>
 							<p class="leading-relaxed mb-2 line-clamp-3">{{$review['content']}}</p>
-							<a class="text-yellow-500 hover:text-yellow-700 inline-flex items-center p-1.5"
+							<a class="text-yellow-500 hover:text-yellow-600 inline-flex items-center p-1.5"
 								href="/show/{{$review['id']}}">レビュー詳細
 								<svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"
 									fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -70,7 +69,7 @@
 					<div class="p-4 md:w-1/3">
 						<div class="h-full border-2 border-gray-300 border-opacity-60 rounded-lg overflow-hidden">
 							<img class="lg:h-48 md:h-36 w-full object-cover object-center"
-								src="data:image/png;base64,{{ $review['image'] }}" alt="blog">
+								src="{{ '/storage/' . $myReview['image']}}" alt="blog">
 							<div class="p-6">
 								<h1 class="title-font text-lg font-medium text-gray-900 ">{{$myReview['onsenName']}}
 								</h1>

@@ -20,7 +20,7 @@ return new class () extends Migration {
             $table->bigInteger('user_id');
             $table->Text('onsenName');
             $table->bigInteger('tag_id')->nullable();
-            $table->longText('image')->nullable();
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
