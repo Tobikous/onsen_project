@@ -33,7 +33,7 @@
 					<div class="p-4 lg:w-1/3">
 						<div class="h-full bg-gray-100 bg-opacity-75 px-8 pt-8 pb-10 rounded-lg text-center">
 							<img alt="gallery" class="lg:h-48 md:h-36 w-full object-cover object-center"
-								src="{{ '/storage/' . $review['image']}}">
+								src="data:image/png;base64,{{ $review['image'] }}">
 							<h2
 								class="text-yellow-500 hover:text-yellow-700 tracking-widest text-s title-font font-medium mt-3">
 								{{$review['star']}}
@@ -70,7 +70,7 @@
 					<div class="p-4 md:w-1/3">
 						<div class="h-full border-2 border-gray-300 border-opacity-60 rounded-lg overflow-hidden">
 							<img class="lg:h-48 md:h-36 w-full object-cover object-center"
-								src="{{ '/storage/' . $myReview['image']}}" alt="blog">
+								src="data:image/png;base64,{{ $review['image'] }}" alt="blog">
 							<div class="p-6">
 								<h1 class="title-font text-lg font-medium text-gray-900 ">{{$myReview['onsenName']}}
 								</h1>
