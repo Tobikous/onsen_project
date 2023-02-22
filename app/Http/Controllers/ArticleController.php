@@ -51,7 +51,7 @@ class ArticleController extends Controller
 
         $image = $request->file('image');
         if ($request->hasFile('image')) {
-            $path = \Storage::disk('s3')-put('/public', $image);
+            $path = \Storage::disk('s3')->putFile('image', $image, 'public');
             $path = explode('/', $path);
         } else {
             $path = 'null';
@@ -126,7 +126,7 @@ class ArticleController extends Controller
         $image = $request->file('image');
 
         if ($request->hasFile('image')) {
-            $path = \Storage::disk('s3')-put('/public', $image);
+            $path = \Storage::disk('s3')->putFile('image', $image, 'public');
             $path = explode('/', $path);
         } else {
             $path = 'null';
