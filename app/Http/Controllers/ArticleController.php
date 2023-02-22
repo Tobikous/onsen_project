@@ -7,6 +7,7 @@ use App\Models\Review;
 use App\Models\Tag;
 use App\Models\Onsen;
 use App\Http\Requests\UserRequest;
+use Illuminate\Support\Facades\Storage;
 
 class ArticleController extends Controller
 {
@@ -54,7 +55,7 @@ class ArticleController extends Controller
             $path = \Storage::disk('s3')->putFile('imagefile', $image, 'public');
             $imagepath = Storage::disk('s3')->url($path);
         } else {
-            $path = 'null';
+            $imagepath = 'null';
         }
 
         $existOnsen = Onsen::where('name', $data['onsenName'])->first();
