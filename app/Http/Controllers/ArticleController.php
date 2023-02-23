@@ -127,17 +127,15 @@ class ArticleController extends Controller
         $image = $request->file('image');
 
         if ($request->hasFile('image')) {
-            $path = \Storage::disk('s3')->putFile('image', $image, 'public');
-            $path = explode('/', $path);
-        } else {
-            $path = 'null';
+            $path = Storage::disk('s3')->putFile('/', $image, 'public');
+            $imagepath = Storage::disk('s3')->url($path);
         }
 
         Review::where('id', $id)->update([
         'content'=> $inputs['content'],
         'star' => $inputs['star'],
         'time' => $inputs['time'],
-        'image' => $path[1],
+        'image' => $imagepath,
         'tag_id' => $tagId ]);
         return redirect()->route('home')->with('success', 'レビューを更新しました。');
     }
