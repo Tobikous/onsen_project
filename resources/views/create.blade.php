@@ -11,7 +11,7 @@
 			@csrf
 
 
-			<h1 class="block text-4xl font-bold text-gray-800 dark:text-white mb-11">レビューの投稿</h1>
+			<h1 class="block text-4xl font-bold text-gray-800 mb-11">レビューの投稿</h1>
 
 
 			<div class="mb-8">
@@ -25,9 +25,9 @@
 			</div>
 
 			<div class="mb-8">
-				<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">都道府県:</label>
+				<label class="block mb-2 text-sm font-medium text-gray-900">都道府県:</label>
 				<select name='area'
-					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
 					<option value="" selected hidden>選択してください</option>
 					<optgroup label="北海道">
 						<option value="北海道">北海道</option>
@@ -96,15 +96,15 @@
 
 			<div class="mb-8">
 				<label for="onsenName"
-					class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">温泉名:</label>
+					class="block mb-2 text-sm font-medium text-gray-900">温泉名:</label>
 				<input type="text" name='onsenName' placeholder="行った場所を記入してください"
-					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
 			</div>
 
 			<div class="mb-8">
-				<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">レビュー点数:</label>
+				<label class="block mb-2 text-sm font-medium text-gray-900">レビュー点数:</label>
 				<select name='star'
-					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
 					<option value="" selected hidden>選択してください</option>
 					<option>★☆☆☆☆</option>
 					<option>★★☆☆☆</option>
@@ -115,9 +115,9 @@
 			</div>
 
 			<div class="mb-8">
-				<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">時間帯:</label>
+				<label class="block mb-2 text-sm font-medium text-gray-900">時間帯:</label>
 				<select name='time'
-					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
 					<option>早朝</option>
 					<option>午前</option>
 					<option>昼</option>
@@ -127,17 +127,17 @@
 			</div>
 
 			<div class="mb-8">
-				<label class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">レビュー詳細:</label>
+				<label class="block mb-2 text-sm font-medium text-gray-900">レビュー詳細:</label>
 				<textarea name='content'
-					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
 					maxlength='3000' row='4'></textarea>
 			</div>
 
 
 			<div class="mb-8">
-				<label for="tag" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">タグ</label>
+				<label for="tag" class="block mb-2 text-sm font-medium text-gray-900">タグ</label>
 				<input name='tag' type="text"
-					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
 					id="tag" list="tags" placeholder="テキスト入力もしくはクリック">
 				<datalist id="tags">
 					@foreach($allTags as $allTag)
@@ -148,7 +148,7 @@
 
 
 			<div class="mb-8">
-				<label for="image" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">写真</label>
+				<label for="image" class="block mb-2 text-sm font-medium text-gray-900">写真</label>
 				<div class="mt-1 flex justify-center rounded-md border-2 border-dashed border-gray-300 px-6 pt-5 pb-6">
 					<input type="file" name='image' id="image">
 					<div class="space-y-1 text-center">
@@ -173,11 +173,11 @@
 
 			<div class="mb-6">
 				<button type="submit"
-					class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-orange-400 dark:hover:bg-orange-500 dark:focus:ring-orange-600">レビューを投稿する</button>
+					class="text-white bg-orange-500 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">レビューを投稿する</button>
 			</div>
 			<div>
 				<button type="button"
-					class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-400 dark:hover:bg-blue-500 dark:focus:ring-blue-600"
+					class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
 					onclick="location.href  =  '/home'">投稿をやめる</button>
 			</div>
 		</form>

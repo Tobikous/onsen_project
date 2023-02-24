@@ -1,0 +1,21 @@
+{
+    "name": "onsen-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "postcss.config.js",
+    "directories": {
+        "test": "tests"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.5.2",
+        "alpinejs": "^3.4.2",
+        "autoprefixer": "^10.4.2",
+        "postcss": "^8.4.6",
+        "tailwindcss": "^3.1.0"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC"
+}
