@@ -38,4 +38,4 @@ app.component('example-component', ExampleComponent);
 
 app.mount('#app');
 
-import 'flowbite';
+// import 'flowbite';
